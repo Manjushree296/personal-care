@@ -1,0 +1,11 @@
+ingredient_name,not_safe_for_oily,not_safe_for_dry,not_safe_for_sensitive,not_safe_for_combination,not_safe_for_normal,not_safe_for_none
+niacinamide,0,0,0,0,0,0
+coconut oil,1,0,1,0,0,0
+salicylic acid,0,1,0,0,0,0
+alcohol denat.,0,1,1,1,0,0
+tea tree oil,0,1,1,1,0,0
+essential oils,1,1,1,1,1,1
+fragrance,0,0,1,0,0,1
+retinol,0,1,1,1,0,0
+lactic acid,0,0,1,0,0,0
+mineral oil,1,0,0,0,0,0

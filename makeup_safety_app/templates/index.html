@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingredient Safety Checker</title>
+    <style>
+        body { font-family: Arial; padding: 40px; }
+        input, select { padding: 8px; margin: 10px 0; width: 300px; }
+        button { padding: 10px 20px; }
+        .result { margin-top: 30px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <h1>Ingredient Safety Checker</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label>Skin Type:</label><br>
+        <select name="skin" required>
+            <option value="oily">Oily</option>
+            <option value="dry">Dry</option>
+            <option value="sensitive">Sensitive</option>
+            <option value="combination">Combination</option>
+            <option value="normal">Normal</option>
+            <option value="none">None</option>
+        </select><br>
+
+        <label>Known Allergic Reactions (optional):</label><br>
+        <input type="text" name="reaction"><br>
+
+        <label>Upload Ingredient Image:</label><br>
+        <input type="file" name="image" accept="image/*" required><br><br>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    <div class="result">
+        {% if report %}
+            <h2>Analysis Result:</h2>
+            <p>{{ report|safe }}</p>
+            <p>{{ safety_score|safe }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
